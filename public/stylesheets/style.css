@@ -1,0 +1,36 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}*/
+
+#gmap {
+      width: 800px;
+      height: 800px
+}
+
+#menu{
+  width: 100%; height: 50px;
+  background: #0080A3;
+}
+
+#slide-out
+{
+  background-color: #0080A3;
+}
+
+.side-nav.fixed li a{
+  color: #FFFFFF;
+}
+
+.side-nav.fixed li div p{
+  color: #FFFFFF;
+}
+
+.side-nav.fixed li a{
+  color: #FFFFFF;
+}
+
+.side-nav.fixed li a:hover{
+  text-decoration: none;
+  background: rgba(255,255,255,0.1);
+}

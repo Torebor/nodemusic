@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  br
+  br
+  div.col.s12
+    div.col.s6.offset-s3
+      form(action='/index/subir',method='post', enctype='multipart/form-data')
+        div.row
+            div.col.s8
+              div.file-field.input-field
+                div.btn
+                  i.material-icons send
+                    input(id='txtsubir',type='file',value='',name='txtsubir')
+                div.file-path-wrapper
+                  input(type = 'text').file-path.validate
+            div.col.s3
+                //button(type='submit').btn.btn-floating.btn-large.pulse
+                    i.material-icons cloud
+                input(type='submit',value='Subir',data-transition='fade').btn.btn-floating.btn-large.pulse.red
+        div.row
+          audio(id="playlist" src="", preload="auto")
+          if (list.length)
+            h4 Mis audios
+            each item in list
+              div.divider
+              div.section
+                h5=item
+                br
+                div.row.col.s12
+                  div.col.s1
+                    a(href="#", id="/playlist/" + item, OnClick='btnescuchar(this)').btn.btn-floating.btn-large.pulse.red
+                      i.material-icons play_arrow
+                  div.col.s1
+                    a(href="#", id="/playlist/" + item, OnClick='btnpause(this)').btn.btn-floating.btn-large.pulse.red
+                      i.material-icons stop
+                  div.col.s1
+                    a(href='/playlist/'+item+'', id="/playlist/" + item, download).btn.btn-floating.btn-large.pulse.red
+                      i.material-icons play_for_work
+          else
+            div.divider
+            div.section
+              p no se han encontrado archivos
